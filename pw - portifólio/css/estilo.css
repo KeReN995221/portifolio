@@ -1,0 +1,233 @@
+@import url(variaveis.css);
+
+/* estilo do todo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anybody', sans-serif;
+}
+
+body {
+    background-color: #1d1d1d;
+}
+
+.interface {
+    max-width: 1280px;
+    /* largura máxima da janela*/
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+
+h2 {
+    text-transform: uppercase;
+    color: #e3efdf61;
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: 23px;
+    font-weight: 300;
+}
+
+
+h3 {
+    color: #e3efdf61;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: left;
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .contato {
+        margin-bottom: 10px;
+        font-size: large;
+
+
+    }
+
+    .section {
+        text-align: center;
+    }
+}
+
+
+/* estilo do cabeçalho */
+
+header {
+    padding: 15px 4%;
+}
+
+header>.interface {
+    /* display flex*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header a {
+    color: #7d7d7d;
+    display: inline-block;
+    text-decoration: none;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #AEB4AB;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
+header .contato button {
+    background-color: #1d1d1d;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 2px solid #aeb4ab21;
+    cursor: pointer;
+
+}
+
+header .contato button{
+    color: #AEB4AB;
+}
+
+header .contato button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #aeb4ab;
+    color: #AEB4AB;
+}
+
+/*estilo capa*/
+.capa {
+    background-image: url(../img/foto.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}
+
+.txt {
+    padding: 150px 30%;
+    align-items: center;
+    justify-content: center;
+    color: #7d7d7d;
+
+}
+
+.capa h1 {
+
+    line-height: 33px;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+.capa span {
+    color: #AEB4AB;
+}
+
+.capa p {
+    line-height: px;
+    text-align: justify;
+}
+
+/*sobre*/
+.sobre .img {
+    padding: 10px 4%;
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color:#AEB4AB;
+    
+}
+
+.sobre .txt-sobre h2{
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-contact button{
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+    border: none;
+    background-color: #AEB4AB;
+}
+.sobre .txt-sobre .btn-contact button i{
+    color: #1d1d1d;
+}
+
+.sobre .txt-sobre .btn-contact button:hover{
+    transform: scale(1.05);
+}
+/*especialidades*/
+.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .box {
+    border-radius: 20px;
+    margin-top: 45px;
+    color: #e3efdf61;
+    padding: 40px;
+    border: 2px solid #aeb4ab21;
+    transition: .2s;
+}
+
+.especialidades .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #aeb4ab;
+    color: #AEB4AB;
+}
+
+.especialidades .box i {
+    text-align: center;
+    font-size: 48px;
+    color: #e3efdf61;
+}
+
+
+
+/*projetos desenvolvidos*/
+
+.projeto-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.projeto-item {
+    background-color: #e3efdf61;
+    box-shadow: 0 0 10px rgb(29, 29, 29);
+
+}
