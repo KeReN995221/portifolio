@@ -1,0 +1,325 @@
+@import url(variaveis.css);
+
+/* estilo do todo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anybody', sans-serif;
+}
+
+body {
+    background-color: #1d1d1d;
+    min-height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    /* largura máxima da janela*/
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+
+h2 {
+    text-transform: uppercase;
+    color: #e3efdf61;
+    text-align: center;
+    font-family: "Lexend Zetta", sans-serif;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+
+h3 {
+    color: #e3efdf61;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 15px 0;
+    text-align: left;
+    font-family: "Lexend Zetta", sans-serif;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 12px #aeb4ab;
+    transition: .2s;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .contato {
+        margin-bottom: 10px;
+        font-size: large;
+
+
+    }
+
+    .section {
+        text-align: center;
+    }
+}
+
+
+/* estilo do cabeçalho */
+
+header {
+    padding: 15px 4%;
+}
+
+header>.interface {
+    /* display flex*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header a {
+    color: #7d7d7d;
+    display: inline-block;
+    text-decoration: none;
+    transition: .2s;
+}
+
+header a:hover {
+    color: #AEB4AB;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
+header .contato button {
+    background-color: #1d1d1d;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 2px solid #aeb4ab21;
+    cursor: pointer;
+
+}
+
+header .contato button{
+    color: #AEB4AB;
+}
+
+
+
+/*estilo capa*/
+.capa {
+    background-image: url(../img/foto3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    align-items: center;
+    padding: 300px 30%; 
+    
+}
+
+
+.flex .overlay{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1d1d1dba;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    flex-direction: column;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aeb4ab;
+    gap: 20px;
+
+}
+
+.overlay:hover{
+    opacity: 0.5;
+    flex-direction: column;
+}
+
+.capa h1 {
+
+    line-height: 33px;
+    font-size: 38px;
+    font-weight: 300;
+    font-family: "Lexend Zetta", sans-serif;
+    
+}
+
+
+.capa p {
+    display:block;
+    line-height: 22px;
+    
+}
+
+/*sobre*/
+
+section.sobre{
+    padding: 80px;
+    
+}
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+.sobre .txt-sobre{
+    color:#AEB4AB;
+    
+}
+
+.sobre .txt-sobre h2{
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.sobre .txt-sobre .btn-contact button{
+    width: 40px;
+    height: 40px;
+    border-radius: 90px;
+    border: none;
+    background-color: #AEB4AB;
+    margin: 0 5px;
+    
+}
+.sobre .txt-sobre .btn-contact button i{
+    color: #1d1d1d;
+}
+
+.sobre .txt-sobre .btn-contact button:hover{
+    transform: scale(1.05);
+}
+
+
+
+/*especialidades*/
+.especialidades{
+    box-shadow:  0 0 40px 10px  #aeb4ab2c;
+    padding: 80px;
+}
+
+.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .box {
+    border-radius: 20px;
+    margin-top: 45px;
+    color: #e3efdf61;
+    padding: 40px;
+    border: 2px solid #aeb4ab21;
+    transition: .2s;
+}
+
+.especialidades .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #aeb4ab;
+    color: #AEB4AB;
+}
+
+.especialidades .box i {
+    text-align: center;
+    font-size: 48px;
+    color: #e3efdf61;
+}
+
+
+
+/*projetos desenvolvidos*/
+
+.projetos{
+    padding: 80px;
+}
+
+.projetos .img-proj{
+    border-radius: 20px;
+    margin-top: 45px;
+    padding: 40px;
+    width: 360px;
+    height: 460px;
+    
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 7s;
+    cursor: pointer;
+
+    position: relative;
+}
+
+.img-proj:hover{
+    background-position: 100% 100%; /*imagem vai para o final - efeito slide*/
+    
+}
+
+.img-proj .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1d1daa;
+    border-radius: 15px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aeb4ab;
+
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+.projetos .flex{
+    justify-content: space-around;
+}
+
+/*Rodapé*/
+footer {
+    display: flex;
+    box-shadow:  0 0 30px 8px  #aeb4ab16;
+    padding: 11px 4%;
+}
+
+footer >.interface button{
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    border: none;
+    background-color: #AEB4AB;
+    margin: 0 5px;
+}
+
