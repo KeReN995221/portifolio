@@ -1,5 +1,7 @@
 @import url(variaveis.css);
-
+html{
+    scroll-behavior: smooth !important;
+}
 /* estilo do todo */
 * {
     margin: 0;
