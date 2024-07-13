@@ -1,4 +1,57 @@
+
+
+
 @import url(variaveis.css);
+
+
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  .bi {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .bi-moon {
+    display: none;
+  }
+
+  /* Dark theme */
+.dark,
+.dark header {
+  background-color: #263238;
+  color: #fff;
+}
+
+.dark .bi-sun {
+  display: none;
+}
+
+.dark .bi-moon {
+  display: block;
+}
+
+.dark .card {
+  background-color: #37474f;
+}
+
+.dark .card-image {
+  background-color: #273035;
+}
+
+.dark .subtitle {
+  color: #67b4f3;
+}
+
+.dark .description {
+  color: #2196f3;
+}
+
+.dark .btn {
+  background-color: #67b4f3;
+}
+
 html{
     scroll-behavior: smooth !important;
 }
@@ -11,7 +64,7 @@ html{
 }
 
 body {
-    background-color: #1d1d1d;
+    background-color: var(--body-bg);
     min-height: 100vh;
 }
 
@@ -140,7 +193,10 @@ button:hover {
 
 header {
     padding: 15px 4%;
+    
 }
+
+
 
 header>.interface {
     /* display flex*/
@@ -187,7 +243,14 @@ header .contato button {
     color: #AEB4AB;
 }
 
-
+.darkmode{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    margin: 40px;
+}
 
 /*estilo capa*/
 .capa {
