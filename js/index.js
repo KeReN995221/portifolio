@@ -1,5 +1,4 @@
 const changeThemeBtn = document.querySelector("#change-theme");
-
 // Toggle dark mode
 function toggleDarkMode() {
   document.body.classList.toggle("dark");
@@ -14,6 +13,13 @@ function loadTheme() {
   }
 }
 
+function copyWhatsApp(){
+  const copy = '(44) 999006-0526';
+  navigator.clipboard.writeText(copy).then(() =>{
+    alert('Copied! ')
+  })
+}
+
 loadTheme();
 
 changeThemeBtn.addEventListener("change", function () {
@@ -26,3 +32,9 @@ changeThemeBtn.addEventListener("change", function () {
     localStorage.setItem("dark", 1);
   }
 });
+
+
+document.getElementById('bi-whatsapp').addEventListener("click",   function () {
+  copyWhatsApp ();
+  alert('Copied!5 ')
+}); 
