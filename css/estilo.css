@@ -249,8 +249,9 @@ header .contato button {
     top: 0;
     right: 0;
     width: 100px;
-    margin: 40px;
+    margin-top: 40px;
 }
+
 
 /*estilo capa*/
 .capa {
