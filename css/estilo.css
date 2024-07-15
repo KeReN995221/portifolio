@@ -154,6 +154,9 @@ button:hover {
         padding: 80px 8%;
 
     }
+    .sobre img{
+        display: none;
+    }
 
     .projetos .flex {
         display: flex;
@@ -181,15 +184,6 @@ button:hover {
 
 }
 
-/*estilo do cabeçalho mobile
-.menu-mobile{
-    background-color: #AEB4AB;
-    height: 100vh;
-    position: fixed;
-
-}
-*/
-/* estilo do cabeçalho */
 
 header {
     padding: 15px 4%;
@@ -398,53 +392,50 @@ section.sobre .flex {
 }
 
 .projetos .flex {
-    gap: 60px;
-    justify-content: center;
+    padding: 40px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
     align-items: center;
 }
+#repos {
+    
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #repos ul li {
+    height: 100%;
+    min-height: 60px;
+  
+    padding: 10px 60px 10px 10px;
+    margin: 10px 0;
+  
+    position: relative;
+  
+    border: 1px solid #3d3d3d;
+    border-radius: 6px;
+    
+    list-style: none;
+    font-weight: 600;
+  
+    word-wrap: break-word;
+  }
+  
 
-.projetos .img-proj {
+.flex button {
+    background-color: #1d1d1d;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
     border-radius: 20px;
-    margin-top: 45px;
-    padding: 40px;
-
-    width: 360px;
-    height: 460px;
-
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 7s;
+    border: 2px solid #aeb4ab21;
     cursor: pointer;
 
-    position: relative;
 }
 
-.img-proj:hover {
-    background-position: 100% 100%;
-    /*imagem vai para o final - efeito slide*/
-
-}
-
-.img-proj .overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1d1d1daa;
-    border-radius: 15px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #aeb4ab;
-
-    opacity: 0;
-    transition: 0.5s;
-}
-
-.overlay:hover {
-    opacity: 1;
+.flex  button {
+    color: #AEB4AB;
 }
 
 

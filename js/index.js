@@ -20,6 +20,32 @@ function copyWhatsApp(){
   })
 }
 
+async function consultarRepositorios() {
+  
+  const url = `https://api.github.com/users/KeReN995221/repos`;
+  try{
+      const resposta = await fetch(url);
+      
+      if(!resposta.ok){
+          alert("Erro ao realizar a consulta");  
+          return;
+      }
+      const repositorios = await resposta.json();
+      
+      repositorios.forEach(element => {
+          const itemLista = document.createElement('li');
+          itemLista.textContent = element.name;
+          listaRepositorios.appendChild(itemLista);           
+      });
+     
+  }catch(error){
+
+  }
+  status.innerText='';    
+}
+
+
+
 loadTheme();
 
 changeThemeBtn.addEventListener("change", function () {
