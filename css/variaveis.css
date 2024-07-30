@@ -1,6 +1,7 @@
 :root {
-    --body-bg: #fafafa;
-    --body-color: #1d1d1d;
+    --background-color: #35363a;
+    --dark-color:#202123;
     --link-color: #222;
-    --link-color-hover: #aeb4ab;
+    --color-light: #aeb4ab;
+    --white: #fff;
 }

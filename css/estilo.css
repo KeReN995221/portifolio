@@ -1,9 +1,4 @@
-
-
-
 @import url(variaveis.css);
-
-
 input[type="checkbox"] {
     display: none;
   }
@@ -16,14 +11,14 @@ input[type="checkbox"] {
   .bi-moon {
     display: none;
   }
-
-  /* Dark theme */
-.dark,
-.dark header {
-  background-color: #263238;
-  color: #fff;
+.dark {
+  background-color: var(--background-color);
+  color: var(--color-light);
 }
-
+.dark header,
+.footer{
+    background-color: var(--dark-color);
+}
 .dark .bi-sun {
   display: none;
 }
@@ -33,23 +28,27 @@ input[type="checkbox"] {
 }
 
 .dark .card {
-  background-color: #37474f;
+  background-color: var(--background-color);
 }
 
 .dark .card-image {
-  background-color: #273035;
+  background-color: var(--background-color);
 }
 
-.dark .subtitle {
-  color: #67b4f3;
+.dark button{
+    color: var(--color-light);
 }
 
-.dark .description {
-  color: #2196f3;
+.dark.btn-contact.buttons-sobre{
+    color: var(--color-light);
 }
 
-.dark .btn {
-  background-color: #67b4f3;
+.dark button:hover{
+    box-shadow: 0 0 12px var( --color-light);
+}
+
+.dark .especialidades .box:hover{
+    box-shadow: 0 0 12px var( --color-light);
 }
 
 html{
@@ -78,11 +77,9 @@ body {
     display: flex;
 }
 
-
-
 h2 {
     text-transform: uppercase;
-    color: #e3efdf61;
+    color: var( --color-font);
     text-align: center;
     font-family: "Lexend Zetta", sans-serif;
     font-size: x-large;
@@ -91,7 +88,7 @@ h2 {
 
 
 h3 {
-    color: #e3efdf61;
+    color: var( --color-font);
     font-weight: 500;
     font-size: 18px;
     margin: 15px 0;
@@ -101,7 +98,7 @@ h3 {
 
 button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 12px #aeb4ab;
+    box-shadow: 0 0 12px var( --background-color);
     transition: .2s;
 }
 
@@ -179,18 +176,12 @@ button:hover {
         position: relative
     }
 
-
-
-
 }
-
 
 header {
     padding: 15px 4%;
     
 }
-
-
 
 header>.interface {
     /* display flex*/
@@ -201,14 +192,14 @@ header>.interface {
 
 
 header a {
-    color: #7d7d7d;
+    color: var(--color-font);
     display: inline-block;
     text-decoration: none;
     transition: .2s;
 }
 
 header a:hover {
-    color: #AEB4AB;
+    color: var(--color-ligh);
     transform: scale(1.05);
 }
 
@@ -223,18 +214,19 @@ header nav ul li {
 }
 
 header .contato button {
-    background-color: #1d1d1d;
+    background-color: var( --white);
     padding: 10px 20px;
+    color: var(--dark-color);
     font-size: 16px;
     font-weight: 500;
     border-radius: 20px;
-    border: 2px solid #aeb4ab21;
+    border: 2px solid var(--dark-color);
     cursor: pointer;
 
 }
 
-header .contato button {
-    color: #AEB4AB;
+header .contato {
+    color: var(--color-ligh);
 }
 
 .darkmode{
@@ -278,7 +270,7 @@ header .contato button {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #aeb4ab;
+    color: var(--white);
     gap: 20px;
 
 }
@@ -311,14 +303,13 @@ section.sobre {
 
 }
 
-section.sobre .flex {
+.sobre .flex {
     align-items: center;
-    gap: 60px;
 }
 
 .sobre .txt-sobre {
-    color: #AEB4AB;
-
+    color: var(--color-ligh);
+    padding-left: 20px;
 }
 
 .sobre .txt-sobre h2 {
@@ -332,17 +323,13 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre .btn-contact button {
-    width: 40px;
-    height: 40px;
-    border-radius: 90px;
+    border-radius: 100px;
     border: none;
-    background-color: #AEB4AB;
-    margin: 0 5px;
-
+    background-color: var(--color-ligh);
 }
 
 .sobre .txt-sobre .btn-contact button i {
-    color: #1d1d1d;
+    color: var(--background-color);
 }
 
 .sobre .txt-sobre .btn-contact button:hover {
@@ -353,34 +340,35 @@ section.sobre .flex {
 
 /*especialidades*/
 .especialidades {
-    box-shadow: 0 0 40px 10px #aeb4ab2c;
-    padding: 80px;
+    box-shadow: 0 0 40px 10px var(--color-ligh)2c;
+    padding: 20px;
+    margin: 10px;
 }
 
 .especialidades .flex {
-    gap: 60px;
+    display:flex;
 }
 
 .especialidades .box {
     border-radius: 20px;
     margin-top: 45px;
-    color: #e3efdf61;
+    color: var(--color-font);
     padding: 40px;
-    border: 2px solid #aeb4ab21;
+    border: 2px solid var(--color-ligh);
     transition: .2s;
 }
 
 .especialidades .box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #aeb4ab;
-    color: #AEB4AB;
+    box-shadow: 0 0 5px var(--dark-color);
+    color: var(--color-font);
     transform: scale(1.1);
 }
 
 .especialidades .box i {
     text-align: center;
     font-size: 48px;
-    color: #e3efdf61;
+    color: var(-- --color-font-dark);
 }
 
 
@@ -424,25 +412,27 @@ section.sobre .flex {
   
 
 .flex button {
-    background-color: #1d1d1d;
+    background-color: var(--white);
+    color: var(--color-light);
     padding: 10px 20px;
     font-size: 16px;
     font-weight: 500;
     border-radius: 20px;
-    border: 2px solid #aeb4ab21;
+    border: 1px solid var(--dark-color);
     cursor: pointer;
 
 }
 
 .flex  button {
-    color: #AEB4AB;
+    color: var(--color-ligh);
 }
 
 
 /*Rodapé*/
 footer {
+    background-color: var(--white);
     display: flex;
-    box-shadow: 0 0 30px 8px #aeb4ab16;
+    box-shadow: 0 0 1px 1px var(--background-color);
     padding: 11px 4%;
 }
 
@@ -456,6 +446,6 @@ footer>.interface button {
     height: 30px;
     border-radius: 40px;
     border: none;
-    background-color: #AEB4AB;
+    background-color: var(--color-ligh);
     margin: 0 5px;
 }
