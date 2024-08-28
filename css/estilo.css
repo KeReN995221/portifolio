@@ -39,8 +39,8 @@ input[type="checkbox"] {
     color: var(--color-light);
 }
 
-.dark.btn-contact.buttons-sobre{
-    color: var(--color-light);
+.dark .sobre .txt-sobre .btn-contact button{
+    background-color: var(--color-light);
 }
 
 .dark button:hover{
@@ -103,8 +103,8 @@ button:hover {
 }
 
 
-@media screen and (max-width: 1020px) {
-
+@media screen and (max-width: 768px) {
+    
     /*768*/
     .flex {
         flex-direction: column;
@@ -133,26 +133,28 @@ button:hover {
         font-weight: 30px;
     }
 
+    .txt-sobre .btn-contact button{
+        color: var(--white);
+    }
+
     .contato {
         display: none;
         margin-bottom: 10px;
         font-size: large;
     }
 
-    .section {
-        text-align: center;
-    }
-
-    .sobre {
-        padding: 80px 8%;
-    }
-
-    .projetos {
-        padding: 80px 8%;
-
-    }
     .sobre img{
         display: none;
+    }
+
+    section.sobre {
+        padding: 15px!important;
+    
+    }
+
+    .sobre .txt-sobre {
+        padding-left: 0px!important;
+        text-align: justify;
     }
 
     .projetos .flex {
@@ -174,6 +176,19 @@ button:hover {
         cursor: pointer;
 
         position: relative
+    }
+
+    .especialidades .box{
+        padding: 15px!important;
+    }
+
+    .projetos {
+        padding: 10px!important;
+    }
+
+    .projetos .flex{
+        margin-top: 10px!important;
+        padding: 5px!important;
     }
 
 }
@@ -299,7 +314,7 @@ header .contato {
 /*sobre*/
 
 section.sobre {
-    padding: 80px;
+    padding: 60px;
 
 }
 
